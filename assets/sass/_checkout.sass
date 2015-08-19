@@ -1,0 +1,289 @@
+$line: #dddddd
+$blue: #1a63a3
+
+.checkout-page
+  h2
+    margin: 10px 0 15px
+    padding: 0 0 7px 0
+    line-height: 18px
+    font-size: 1em
+    font-weight: bold
+    color: #666666
+    border-bottom: 1px solid #ddd
+    box-shadow: 0 0 0 #f7f7f7
+  h3
+    margin: 30px 0 0
+    padding: 0 0 7px 0
+    line-height: 18px
+    font-size: 14px
+    font-weight: 600
+    color: #666666
+  .wrap
+    background-color: #fff
+    padding: 20px 0
+    margin-bottom: 0
+  .checkout-login
+    background-color: #f4f4f4
+    padding: 15px
+    p
+      font-size: 1em
+    .login-box
+      margin-top: 10px
+      input[type="password"],input[type="email"]
+        height: 40px
+        border-radius: 5px
+        border: 1px solid $line
+        width: 90%
+        margin: 0 auto 10px
+        display: block
+        padding-left: 10px
+      a
+        color: #e23623
+      form
+        p
+          margin-left: 5%
+          float: left
+          max-width: 60%
+          display: block
+    .login-social-box
+      p
+        margin-top: 40px
+        margin-bottom: 20px
+      .social-login
+        height: 40px
+        border-radius: 5px
+        border: 1px solid $line
+        a
+          width: 50%
+          height: 28px
+          display: block
+          float: left
+          text-decoration: none
+          line-height: 28px
+          background-repeat: no-repeat
+          background-position: 90px center
+          padding-right: 60px
+          text-align: right
+          margin-top: 6px
+          &:hover
+            text-decoration: underline
+        a:first-child
+          border-right: 1px solid $line
+  .no-login-box
+    button
+      display: block
+      width: 80%
+      margin: 113px auto 0px
+      background-color: #000
+      border: 1px solid $line
+      height: 40px
+      border-radius: 5px
+      font-size: 15px
+      color: #fff
+      &:hover
+        text-decoration: underline
+  .content
+    label
+      font-weight: normal
+    input[type="radio"]
+      margin-left: 10px
+      margin-right: 7px
+      vertical-align: middle
+      margin-top: 0px
+    .invoice
+      .invoice-type
+        margin-left: 150px
+      label
+        width: 145px
+        &.address
+          width: 70%
+          vertical-align: middle
+          padding-left: 5px
+      input[type="radio"]
+        margin-left: 0px
+    input[type="text"], input[type="password"], input[type="email"], select
+      border-radius: 0px
+      border: 1px solid $line
+      outline: none
+      width: 255px
+      height: 27px
+      padding-left: 5px
+      margin-bottom: 10px
+    .msg
+      margin-bottom: 5px
+      font-weight: 400
+      font-style: italic
+  .delivery
+    label
+      margin-bottom: 15px
+    .address
+      padding-left: 35px
+      font-size: 1em
+    button.modify-address
+      margin-top: 15px
+      margin-bottom: 10px
+    button.add-new-address
+      margin-top: 20px
+    a.delete-address
+      display: block
+      text-decoration: underline
+      color: #7e7e7e
+  .transport
+    img
+      float: right
+    .transport-detail
+      margin-bottom: 10px
+    p
+      display: block
+      background-color: #ededed
+      border-radius: 5px
+      padding: 10px
+      font-size: 1em
+      width: 78%
+  .coupon
+    label
+      width: 145px
+    input[type="radio"]
+      margin-left: 0px
+  .newsletter
+    input
+      vertical-align: middle
+      margin-top: 0px
+  .total
+    border-top: 1px solid $line
+    border-bottom: 1px solid $line
+    background-color: #f4f4f4
+    line-height: 30px
+    margin-top: 25px
+  .finish
+    padding-top: 10px
+    i
+      font-size: 2.5em
+      color: #00C909
+      vertical-align: middle
+    input[type="checkbox"]
+      vertical-align: middle
+      margin: 0 10px 0 5px
+      float: none !important
+    p
+      max-width: 50%
+      margin: 1px 0
+  .checkout-detail
+    background-color: #fff
+    // box-shadow: 10px 10px 20px -10px #000;
+    border: 1px solid #DDD
+    color: #000
+    border: 1px solid $line
+    font-size: 1em
+    margin-top: 30px
+    z-index: 5
+    a
+      color: #000
+      text-decoration: underline
+      &:hover
+        color: $color-accent
+        text-decoration: none
+    a.edit
+      text-transform: none
+      font-size: 1em
+    p
+      width: 100%
+      margin: 0
+      line-height: 25px
+    p.subtotal-pay
+      font-size: 14px
+    ul
+      margin: 0
+      padding: 0
+      li
+        border-bottom: 1px solid $line
+      span
+        float: right
+      li:last-child
+        border: none
+    .detail-wrap
+      padding: 10px
+    a.links
+      width: 100%
+      text-align: right
+      display: block
+    p.total-pay
+      font-size: 14px
+      background-color: $color-accent
+      height: 30px
+      line-height: 30px
+      // border-bottom: 5px solid $line;
+      color: #fff
+      padding-left: 5px
+      font-weight: 600
+      span
+        padding-right: 5px
+        float: right
+    p.total-pay-tva
+      margin-top: -10px
+  .scroll-box
+    top: 33px
+    position: fixed
+    margin-top: 0px
+  .recipe-product
+    box-shadow: 10px 10px 20px -12px #000
+    border: 1px solid #DDD
+    padding: 0 0 10px 0
+    margin: 20px 0 0 0
+    clear: both
+    float: left
+    width: 100%
+    h3
+      margin: 10px 0 5px 0
+      padding: 0
+    a
+      font-size: 14px
+      font-weight: 700
+      color: #3479ba
+      line-height: 1.3
+      margin: 0px 0px 10px 0px
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+    img
+      max-height: 90px
+      margin: 0 0 5px 0
+    .price
+      margin-top: 50px
+      p
+        margin: 0
+        padding: 0
+        line-height: 25px
+  .plati
+    display: inline-block
+    width: auto
+  .transport-box select
+    width: 195px
+
+.most-popular
+  margin: 0 0 20px 0
+  width: 100%
+  float: left
+  .product-box
+    height: 310px
+  h4
+    padding: 0 0 7px 0
+    margin: 13px 15px 10px 15px
+    font-weight: 700
+    font-size: 18px
+    color: #000
+    border-bottom: 1px solid #CCCCCC
+
+.finish
+  a
+    color: #000
+    text-decoration: underline
+  .button-finalizare
+    font-size: 16px
+
+.checkout-links a
+  text-decoration: underline
+  color: #f70002
+  line-height: 1.7
+  &:hover
+    text-decoration: none

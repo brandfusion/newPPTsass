@@ -1,0 +1,101 @@
+.product
+  opacity: 0
+
+.product-item
+  position: relative
+  margin-bottom: 1em
+  min-height: 445px
+  border: 1px solid #fff
+  font-size: 1em
+  &:hover
+    border: 1px solid #d9d9d9
+  .sale
+    position: absolute
+    top: 0px
+    width: 100%
+  span.btn-calltoaction
+    margin: -0.5em 0.5em 0.5em 0
+    cursor: default
+  a
+    margin: -0.5em 0.5em 0.5em 0
+    span.btn-calltoaction
+      cursor: pointer
+
+.product-list .product
+  &:hover
+    .secondImage
+      display: block
+
+.product-title
+  max-width: 100%
+  padding: 0 1em
+  h2
+    text-align: left
+    padding: 0.5em 0
+    font-size: 1em
+    line-height: 1.4
+  a
+    font-weight: 400
+    color: #000
+    &:hover
+      text-decoration: none
+      color: #f8040e
+
+.product-price
+  text-align: left
+  font-size: 18px
+  line-height: 1
+  color: #ef2424
+  font-style: normal
+  font-weight: 700
+  padding: 0 0.5em 0.3em 0.6em
+
+.product-extra
+  padding: 0 1em
+  font-size: 11px
+  color: #999
+  min-height: 36px
+  text-align: left
+  max-width: 100%
+  .product-view-link
+    display: block
+    text-align: center
+    background-color: $color-accent-secondary
+    text-transform: capitalize
+    &:hover
+      background-color: $green
+
+.product-image
+  height: 339px
+  overflow: hidden
+  margin-bottom: 0.5em
+  position: relative
+  img
+    position: relative
+    z-index: 1
+  .secondImage
+    position: absolute
+    top: 0px
+    left: 0px
+    display: none
+    -webkit-transition: all .4s ease
+    -moz-transition: all .4s ease
+    -o-transition: all .4s ease
+    transition: all .4s ease
+
+.rating_list
+  list-style: none
+  margin: 0 0 0.5em 0
+  li
+    width: 13px
+    height: 13px
+    cursor: pointer
+    line-height: 13px
+    padding-top: 2px
+    float: left
+    margin: 0 1px 0 0
+    i
+      font-size: 1em
+      color: #e5e5e5
+      &.active
+        color: #d6a916

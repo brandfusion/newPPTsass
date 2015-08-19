@@ -1,0 +1,291 @@
+#authentication-page
+  input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
+    background-color: #ddd
+  .wrap
+    background-color: #fff
+  a
+    color: #333
+  \::-webkit-input-placeholder
+    color: red
+  \:-moz-placeholder
+    color: red
+    opacity: 1
+  \::-moz-placeholder
+    color: red
+    opacity: 1
+  \:-ms-input-placeholder
+    color: red
+  h2
+    color: #FFF
+    background-color: $color-accent
+    font-size: 14px
+    font-weight: 400
+    margin: 0px
+    display: block
+    width: 100%
+    line-height: 36px
+    padding-left: 20px
+  #errormessages
+    margin: 0 0 0 20px
+    padding: 0
+    ul
+      li
+        text-decoration: none
+        font-size: 12px
+        font-weight: 400
+        color: #000
+        line-height: 18px
+        a
+          color: #3379B8
+          text-decoration: underline
+  .no-padding-left
+    padding-left: 0
+  .terms
+    p
+      input
+        width: auto
+        margin-bottom: 5px
+        vertical-align: middle
+        margin-right: 5px
+      a
+        // color:#3379B8;
+        font-weight: normal
+        text-decoration: underline
+        &:hover
+          // text-decoration:none;
+  .new-cont
+    color: #676767
+    label
+      padding: 10px 0 0 0
+    input[type="text"], input[type="password"]
+      display: inline-block
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+      -webkit-transition: border linear 0.2s, box-shadow linear 0.2s
+      -moz-transition: border linear 0.2s, box-shadow linear 0.2s
+      -ms-transition: border linear 0.2s, box-shadow linear 0.2s
+      -o-transition: border linear 0.2s, box-shadow linear 0.2s
+      transition: border linear 0.2s, box-shadow linear 0.2s
+      background-color: #ffffff
+      border: 1px solid #E7E7E7
+      display: inline-block
+      padding: 5px 8px
+      margin: 5px 0
+      min-height: 30px
+      font-size: 13px
+      line-height: 18px
+      color: #555555
+      width: 200px
+      &:focus
+        border-color: rgba(141, 184, 175, 0.7)
+        outline: 0
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(141, 184, 175, 0.4)
+        -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(141, 184, 175, 0.4)
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(141, 184, 175, 0.4)
+    select
+      margin: 7px 0
+      border: 1px solid #E7E7E7
+      width: 200px
+      padding: 5px 10px
+    .button-review
+      padding: 0px 15px
+    p.terms, p.info
+      margin: 10px 0
+      padding: 0
+      display: block
+      clear: both
+      a
+        text-decoration: none
+        color: #ef2424
+
+h1, h1.page-header
+  font-size: 16px
+  font-weight: 800
+  color: #000
+  padding: 20px 0px 20px 0
+  margin: 0px 0px 0px 0px
+  border: none
+
+.account-questions
+  clear: both
+  background-color: #EEEEEE
+  padding: 15px
+  display: block
+  margin: 20px 0 0px 0
+  background-color: #EEEEEE
+
+.login-footer
+  input
+    float: left
+  a
+    display: inline-block
+    float: left
+    margin-left: 7px
+    color: $color-secondary
+    line-height: 27px
+    font-size: 12px
+    padding-top: 15px
+    &:hover
+      text-decoration: underline
+
+.account-content
+  border: none
+  label
+    color: $color-secondary
+    font-weight: 400
+    padding-left: 0px
+    margin-bottom: 0px
+    width: auto
+  input[type="text"]
+  input[type="radio"]
+    margin-right: 10px
+  a
+    // color: #3379B8;
+    font-weight: normal
+
+.account-content-wrapper
+  // h2 {
+  // 	color: #FFF;
+  // 	background-color: $color-primary;		
+  // 	font-size: 10px;
+  // 	font-weight: 700;		
+  // 	margin: 0px;
+  // 	display: block;
+  // 	width: 100%;
+  // 	line-height: 36px;
+  // 	padding-left: 20px;
+  // 	text-transform: uppercase;
+  // }
+  // .button-account {
+  // 	margin-top: 15px;
+  // }
+  // h3 {
+  // 	font-size: 18px;
+  // 	font-weight: 300;
+  // 	margin:0 0 15px 0px;
+  // }
+  // p {
+  // 	font-size: 12px;		
+  // 	margin: 0px;
+  // }
+  .social-login
+    .social
+      width: 100%
+      text-align: left
+      a
+        width: auto
+        display: block
+        float: left
+        text-decoration: none
+        background-repeat: no-repeat
+        background-position: center right
+        padding: 0px
+        margin: 0px
+        text-align: left
+        font-size: 14px
+        font-weight: 600
+        .fa
+          transition: all 0.2s ease-in
+      a.facebook-login, a.google-login
+        display: inline-block
+        width: 30px
+        padding: 4px 0
+        color: #ef2424
+        font-size: 14px
+        font-weight: 700
+        text-align: center
+        margin: 0 5px 0 0
+        vertical-align: middle
+        border: 1px solid #ccc
+      a.facebook-login:hover, a.google-login:hover
+        border: 1px solid #e13521
+        background-image: -moz-linear-gradient(top, #f15c24, #ee3030)
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f15c24), to(#ee3030))
+        background-image: -webkit-linear-gradient(top, #f15c24, #ee3030)
+        background-image: -o-linear-gradient(top, #f15c24, #ee3030)
+        background-image: linear-gradient(to bottom, #f15c24, #ee3030)
+        color: #fff
+
+.account-content
+  border: 1px solid #DDD
+  padding: 15px
+  margin-bottom: 20px
+  img
+    float: left
+    margin-top: 4px
+    margin-right: 5px
+  .form-cont
+    label
+      padding-left: 0 !important
+  .btn-newaccount
+    color: #fff
+    background-image: url("../img/eurobike/btn-blue.png")
+    background-color: #1b609e
+    background-repeat: no-repeat
+    background-position: left top
+    height: 25px
+    width: 129px
+    border: 0
+    text-transform: uppercase
+    padding-left: 20px
+    display: block
+    line-height: 25px
+    font-size: 10px
+    margin-bottom: 0
+    margin-top: 0
+
+.align-right
+  text-align: right
+
+.login-box
+  font-size: 14px
+  color: $maincolor
+  font-weight: 400
+  hr
+    clear: both
+    display: block
+    border: none
+    margin: 10px 0 15px 0
+    border-top: 1px solid #eeeeee
+  label
+    font-weight: 400
+    padding: 4px 0 0 0
+    &.checkbox
+      padding: 0
+      input[type="checkbox"]
+        margin: 3px 5px 0 0
+        vertical-align: middle
+  input[type="text"], input[type="password"]
+    width: 220px
+    display: inline-block
+    padding: 5px 8px
+    margin: 0 0 5px 0
+    font-size: 13px
+    line-height: 18px
+    background-color: #ffffff
+    border: 1px solid #E7E7E7
+    -webkit-border-radius: 0px
+    -moz-border-radius: 0px
+    border-radius: 0px
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s
+    -ms-transition: border linear 0.2s, box-shadow linear 0.2s
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s
+    transition: border linear 0.2s, box-shadow linear 0.2s
+    &:focus
+      border-color: rgba(141, 184, 175, 0.7)
+      outline: 0
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(141, 184, 175, 0.4)
+      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(141, 184, 175, 0.4)
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(141, 184, 175, 0.4)
+  .login-form-signuphint
+    margin-top: 5px
+  .forgot, .clickHere
+    font-size: 11px
+    padding: 10px 0 0 0
+    a
+      text-decoration: underline
+      color: #ee3124
+      &:hover
+        text-decoration: none
+  .clickHere
+    margin: 0 0 0 15px
