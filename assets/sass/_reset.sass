@@ -1,12 +1,12 @@
-body
+body, html
   padding: 0px
   margin: 0px
   color: $linkcolor
   font-family: 'Open Sans', Verdana, sans-serif
   background-color: #fff
   color: $maincolor
-  font-weight: 400
-  font-size: 12px
+  font-weight: 400  
+  font-size: 1em
 
 img
   display: block
@@ -22,10 +22,15 @@ p
 a
   text-decoration: none
   color: #000
+  outline: none
 
-a:hover, a:focus
-  color: $color-accent-secondary
+a:hover
+  color: $color-secondary
   text-decoration: none
+a:focus
+  text-decoration: none  
+a:focus, button:focus
+  outline: medium none
 
 ul
   margin: 0px

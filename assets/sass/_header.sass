@@ -7,22 +7,165 @@ $header-bg: white
 
 // Logo
 #logo
+  min-height: 104px
   img
     max-width: 100%
-    margin: 15px 0
+    margin: 10px 0
     display: block
 
-.motto	img
-  margin: 41px 0 0 -21px
-  display: block
+.motto	
+  position: relative
+  .mottoText1, .mottoText2
+    margin: 0
+    display: block
+    font-size: 1.6em
+    font-weight: 300
+    text-align: left
+    position: absolute
+    left: 0
+    top: 35px
+    opacity: 0
+    color: $color-accent-secondary
+    strong, b 
+      font-size: 1.1em
+      font-weight: 600
+  .mottoText1
+    -webkit-animation: switch-in-out  
+    animation: switch-in-out
+    -webkit-animation-duration: 8s
+    animation-duration: 8s  
+    -webkit-animation-iteration-count: infinite  
+    animation-iteration-count: infinite
+  .mottoText2
+    -webkit-animation: switch-in-out-secondary
+    animation: switch-in-out-secondary
+    -webkit-animation-duration: 8s
+    animation-duration: 8s  
+    -webkit-animation-iteration-count: infinite  
+    animation-iteration-count: infinite
 
-.language
-  float: left
-  margin: 3px 0 0 10px
-  padding: 0 10px 2px 10px
-  border-left: 1px solid #3f484e
-  border-right: 1px solid #000000
-  box-shadow: -1px 0 0 #000, 1px 0 0 #3f484e
+ 
+.header-icons 
+  padding: 0
+  font-size: 0.8em
+  margin-top: 0.2em
+
+  .phoneBox, .mailBox 
+    position: relative 
+  .mailBox  
+    margin-right: 5px
+  i 
+    margin: 0 1em 0 0
+    font-size: 1.2em
+    line-height: 1.8
+    padding-bottom: 4px
+  .phoneBox i 
+    margin: 1px 1em 0 0
+
+    
+.fixed .fixed-icons
+  display: block    
+.fixed-icons 
+  display: none 
+.header-icons i  
+  line-height: 1.6 
+
+.phone, .mail 
+  opacity: 0
+  position: absolute
+  top: 100%
+  left: -105px
+  z-index: 99
+  padding: 1em
+  width: 223px
+  font-size: 0.9em
+  line-height: 1.5
+  background: #f0f0f2
+  border-top: 1px solid #fff
+.phone 
+  width: 250px 
+  left: -119px
+.phoneIcon.active, .mailIcon.active 
+  i 
+    color: $color-secondary
+.fixed .header-icons 
+  position: initial
+  right: auto
+  top: auto
+  .email
+    width: auto
+
+
+
+.languages   
+  position: absolute
+  top: 100%
+  right: -2px
+  margin-top: 1px
+  min-width: 164px
+  background: #f0f0f2
+  opacity: 0
+  visibility: hidden
+  -webkit-transform-origin: 0 0
+  -moz-transform-origin: 0 0
+  -o-transform-origin: 0 0
+  -ms-transform-origin: 0 0
+  transform-origin: 0 0
+  -webkit-backface-visibility: hidden
+  li 
+    border: 1px solid #fff
+    a 
+      font-size: 0.7em
+      line-height: 1.2
+      padding: 0.5em 2em 0.6em
+    img 
+      display: inline-block
+      vertical-align: middle
+      margin-right: 0.5em      
+
+.language  
+  display: inline-block 
+  margin: 1px 0 0 0 
+  background: #e5e5e5 
+  border: 1px solid #e5e5e5 
+  padding: 5px 10px 5px 10px 
+  height: 32px  
+  line-height: 1
+  box-sizing: border-box
+  box-shadow: 0 0 0 #000,0 0 0 #3f484e
+  position: relative    
+ 
+  &:hover
+    background: #fff
+    border: 1px solid #e5e5e5
+    -webkit-transition: all .4s ease 
+    -moz-transition: all .4s ease 
+    -o-transition: all .4s ease 
+    transition: all .4s ease
+    .languages 
+      display: block
+      -webkit-transition: all .4s ease 
+      -moz-transition: all .4s ease 
+      -o-transition: all .4s ease 
+      transition: all .4s ease
+  &.active 
+    border: 1px solid $maincolor 
+
+  button
+    border: none 
+    background: none 
+    cursor: pointer
+    &:focus
+      outline: -webkit-focus-ring-color auto 0px
+  img
+    margin-right: 10px
+    display: inline-block
+    vertical-align: middle 
+  i 
+    display: inline-block
+    vertical-align: middle
+    font-size: 0.8em
+
   &.lg-bg
     margin: 3px 0 0 0
   a
@@ -57,11 +200,12 @@ $header-bg: white
 
 // Header
 .header
-  width: 100%
+  width: 100%  
   color: $header-color
   border-bottom: 2px solid #EF2424
   background: url(../img/top-page.jpg) repeat-x left top
   margin-bottom: 0px
+  
   // Account Links
   .account-links
     display: inline-block
@@ -108,32 +252,69 @@ $header-bg: white
       font-weight: bold
       line-height: 1.5
       color: #ef2424
+
+
   .header-cart
     background: #E5E5E5
-    padding: 0.4em 1em
-    font-size: 1.2em
+    font-size: 0.9em
+    line-height: 1
+    padding: 0.6em 1em 0.6em
+    text-align: center
+    min-width: 162px
+    min-height: 32px
+    cursor: pointer
+    
     i
       color: #ef2424
+      font-size: 1em
       margin: 0 5px 0 0
-    .mini-cart
-      position: absolute
-      display: none
-      max-width: 300px
-      top: 100%
-      right: 15px
-      z-index: 9999
-      padding: 15px
-      background-color: #E5E5E5
-      -webkit-border-radius: 0
-      -moz-border-radius: 0
-      border-radius: 0
-      font-size: 0.8em
+
+    .view-cart
+      float: none !important
+      clear: both
+      width: 100%
+      display: block
+      padding: 0.5em 1em
+      margin: 0 0 0.5em 0 
+      text-align: center  
+      border: 1px solid $maincolor
+      text-transform: uppercase
+      background: #fff
+      color: $maincolor
+      &:hover 
+        background: $maincolor
+        color: #fff
+    .checkout
+      float: none !important
+      clear: both
+      width: 100%
+      display: block
+      margin: 0 0 20px 0
+      text-align: center
+      padding: 0.5em 1em
+      text-transform: uppercase
+      border: 1px solid $color-accent-secondary
+      background: $color-accent-secondary
+      color: #fff
+      &:hover 
+        background: #fff
+        border: 1px solid #d6a916
+        color: #d6a916
+    .last
+      padding: 0 
+    .row
+      font-size: 0.9em
+    img 
+      max-width: 60px
+      height: auto
+    
+    .total
+      font-size: 1em
+    
     hr
-      margin: 5px 0
-      border-top: 1px solid #fff
-  .header-cart:hover .mini-cart
-    display: block
-    transition: all 0.2s ease-in
+      margin: 15px 0
+      border-top: 1px solid #fff  
+    
   .header-cos
     display: inline-block
     height: auto
@@ -211,6 +392,28 @@ $header-bg: white
       &:hover
         text-decoration: none
 
+.mini-cart
+  position: absolute
+  max-width: 265px
+  top: 100%
+  right: 15px
+  z-index: 99
+  padding: 20px 20px 0
+  background-color: #f0f0f2
+  -webkit-border-radius: 0
+  -moz-border-radius: 0
+  border-radius: 0  
+  visibility: hidden
+  opacity: 0    
+  text-align: left
+  transition: all 0.2s ease-in
+  max-height: 400px
+  overflow-y: auto
+  i 
+    color: $maincolor
+    font-size: 0.8em
+    font-weight: 300  
+
 .header-search-nav
   background: #185992
   border-top: 1px solid #999999
@@ -268,8 +471,9 @@ $header-bg: white
 
 // Header Nav
 .header-nav
-  padding: 12px 10px 6px 0
+  padding: 11px 10px 6px 0
   float: left
+  line-height: 1
   li
     float: left
     line-height: 1
@@ -278,10 +482,13 @@ $header-bg: white
       border-left: none
   a
     font-size: 11px
-    padding: 0 7px
+    font-weight: 300
+    padding: 0 8px 3px
     margin: 0
     color: $linkcolor
     text-decoration: none
+    line-height: 1.2
+    display: block
     &:hover
       color: $linkcolor-hover
       text-decoration: none
@@ -294,7 +501,8 @@ $header-bg: white
     padding: 0px 15px
     color: #fff
     text-transform: uppercase
-
+.form-group
+  margin: 0
 .header-search
   width: auto
   position: relative
@@ -393,3 +601,276 @@ $header-bg: white
               color: #000
               margin: 0
               font-weight: 700
+.loginBox 
+  position: absolute
+  top: 34px
+  right: 2px  
+  padding: 20px
+  padding: 15px 20px
+  width: 262px
+  z-index: 99  
+  background: #f0f0f2
+  -webkit-transform: translateY(15px)
+  -moz-transform: translateY(15px)
+  -o-transform: translateY(15px)
+  -ms-transform: translateY(15px)
+  transform: translateY(15px)
+  opacity: 0
+  visibility: hidden
+  -webkit-transition: all .4s ease
+  -moz-transition: all .4s ease
+  -o-transition: all .4s ease
+  transition: all .4s ease  
+
+.loginBox.visible 
+  -webkit-transform: translateY(0px)
+  -moz-transform: translateY(0px)
+  -o-transform: translateY(0px)
+  -ms-transform: translateY(0px)
+  transform: translateY(0px)
+  opacity: 1
+  visibility: visible
+
+.login  
+  display: inline-block 
+  margin: 1px 0 
+  position: relative
+
+  input[type="text"], input[type="password"]
+    width: 100%
+    margin: 0 0 0.5em 0  
+  input[type="checkbox"]
+    position: initial
+    margin: 0 5px 0 0
+  label,  
+    color: #595959
+  .new-cont-btn, .login-btn
+    float: none 
+    clear: both
+    width: 100%
+    display: block
+    padding: 0.5em 1em
+    margin: 0 0 0.5em 0 
+    text-align: center  
+    border: 1px solid $maincolor
+    text-transform: uppercase
+    background: #fff
+    color: $maincolor
+    font-size: 0.9em
+    line-height: 1.5
+    &:hover 
+      background: $maincolor
+      color: #fff
+  .login-btn
+    border: 1px solid $color-accent-secondary
+    background: $color-accent-secondary
+    color: #fff
+    
+    &:hover 
+      background: #fff
+      border: 1px solid #d6a916
+      color: #d6a916
+  .forgot
+    margin: 0 0 1.5em 0
+    padding: 0 !important
+    width: 100%
+    float: left
+    text-align: center
+    display: block    
+    border-bottom: 1px solid #fff
+    #show_forgotten
+      clear: both
+      display: block
+      width: 100%
+      font-size: 1.1em
+      line-height: 1
+      background: none
+      color: $maincolor 
+      text-decoration: none
+      border: 1px solid transparent
+      &:hover 
+        color: $color-accent-secondary
+
+  a
+    color: #222226
+    display: inline-block 
+    float: left 
+    background: #e5e5e5 
+    border: 1px solid #e5e5e5 
+    padding: 7px 15px 
+    height: 32px  
+    font-size: 0.8em 
+    line-height: 1
+    margin: 0 2px 0 0
+    box-sizing: border-box
+    -webkit-transition: all .4s ease 
+    -moz-transition: all .4s ease 
+    -o-transition: all .4s ease 
+    transition: all .4s ease  
+
+    &.user-name
+      font-size: 0.6em 
+      padding: 9px 15px 7px 
+      min-height: 34px
+    &.user-name span 
+      font-size: 1.1em 
+      color: $color-accent-secondary  
+    &:hover 
+      background: #fff
+      border: 1px solid #e5e5e5      
+    &.active 
+      border: 1px solid $maincolor 
+          
+  i 
+    font-size: 1em 
+    margin-right: 5px 
+    vertical-align: middle 
+
+.search  
+  display: inline-block 
+  padding: 1px 3px 0 0 
+  position: relative 
+
+  .formSearch 
+    margin: 0
+    float: right
+    height: 32px  
+    line-height: 1
+    background: #fff
+    box-sizing: border-box
+    border: 1px solid $color-primary
+  i  
+    font-size: 1em 
+  input  
+    width: 150px !important
+    padding: 7px 15px 8px
+    border: none !important
+    color: #9c9c9c 
+    font-size: 0.7em 
+    line-height: 1
+    z-index: 2 
+    margin: 0
+    float: left 
+    height: 30px
+    
+  button  
+    background: #fff 
+    border: none 
+    float: left 
+    padding: 6px 10px
+    line-height: 1
+  button:focus, input:focus 
+    outline: -webkit-focus-ring-color auto 0px
+  .instant_search
+    background: #e5e5e5 
+    color: #222226 
+    width: 15em 
+    position: absolute 
+    top: 100% 
+    left: -21px 
+    z-index: 999 
+    ul 
+      display: block 
+      margin: 0 0 0 0 
+      padding: 0 
+      height: 295px 
+      overflow-y: scroll
+      border-top: 1px solid #e5e5e5
+      border-bottom: 1px solid #e5e5e5
+      li 
+        list-style-type: none 
+        padding: 7px 0 
+        clear: both 
+        float: left 
+        width: 100% 
+        border-bottom: 1px dotted #fff
+        &:hover
+          background: #f6f6f6
+      li a 
+        color: #222226        
+      li a img
+        float: left 
+        margin-left: 10px 
+        vertical-align: top 
+        max-width: 45px
+      li a span 
+        margin-left: 15px 
+        float: left 
+        width: 65% 
+        word-break: break-all 
+        font-size: 0.7em 
+        vertical-align: top
+        &.price
+          margin-left: 0px 
+          float: left 
+          width: 100% 
+          font-size: 1.2em 
+          color: #ef2424
+
+.header .fixed .header-cart .mini-cart
+  right: 0          
+.fixed .main-nav ul li .subMenu   
+  padding-top: 0
+
+.transform3d
+  -webkit-transform-style: preserve-3d
+  -moz-transform-style: preserve-3d
+  -o-transform-style: preserve-3d
+  -ms-transform-style: preserve-3d
+  transform-style: preserve-3d
+  -webkit-transform: perspective(600)
+  -moz-transform: perspective(600)
+  -o-transform: perspective(600)
+  perspective: 600px
+  transform: perspective(600)
+  z-index: 5
+  
+
+@-webkit-keyframes switch-in-out
+  0%
+    opacity: 0
+  45%
+    opacity: 1
+  50%
+    opacity: 0
+  95%
+    opacity: 0
+  100%
+    opacity: 0
+
+@keyframes switch-in-out
+  0%
+    opacity: 0
+  45%
+    opacity: 1
+  50%
+    opacity: 0
+  95%
+    opacity: 0
+  100%
+    opacity: 0
+
+@-webkit-keyframes switch-in-out-secondary
+  0%
+    opacity: 0
+  45%
+    opacity: 0
+  50%
+    opacity: 0
+  95%
+    opacity: 1
+  100%
+    opacity: 0
+
+
+@keyframes switch-in-out-secondary
+  0%
+    opacity: 0
+  45%
+    opacity: 0
+  50%
+    opacity: 0
+  95%
+    opacity: 1
+  100%
+    opacity: 0  

@@ -1,23 +1,30 @@
 .product
   opacity: 0
+  font-size: initial
 
 .product-item
   position: relative
   margin-bottom: 1em
   min-height: 445px
   border: 1px solid #fff
-  font-size: 1em
+  display: block
+
   &:hover
     border: 1px solid #d9d9d9
   .sale
     position: absolute
     top: 0px
     width: 100%
+
   span.btn-calltoaction
     margin: -0.5em 0.5em 0.5em 0
     cursor: default
+    color: #fff
+    font-size: 0.8em
+  .btn-calltoaction
+    font-size: 0.8em
   a
-    margin: -0.5em 0.5em 0.5em 0
+    margin: 0
     span.btn-calltoaction
       cursor: pointer
 
@@ -28,64 +35,99 @@
 
 .product-title
   max-width: 100%
-  padding: 0 1em
+  padding: 0.5em 1em
+  background: #fff
+  z-index: 10  
+  display: block
+  font-size: 0.8em 
+  position: relative
   h2
     text-align: left
-    padding: 0.5em 0
-    font-size: 1em
+    padding: 0
     line-height: 1.4
+    font-size: 1em 
   a
     font-weight: 400
     color: #000
+
     &:hover
       text-decoration: none
       color: #f8040e
 
-.product-price
+.product-price  
+  position: relative
+  z-index: 11
   text-align: left
-  font-size: 18px
+  font-size: 1em  
   line-height: 1
   color: #ef2424
   font-style: normal
   font-weight: 700
-  padding: 0 0.5em 0.3em 0.6em
+  background: #fff
+  padding: 0 1em 0.5em 1em
+  a span
+    color: #fff
 
 .product-extra
   padding: 0 1em
-  font-size: 11px
   color: #999
   min-height: 36px
   text-align: left
   max-width: 100%
+  background: #fff
+  z-index: 10
+  font-size: 0.8em
+  display: block
+  position: relative
+
   .product-view-link
     display: block
     text-align: center
     background-color: $color-accent-secondary
     text-transform: capitalize
     &:hover
-      background-color: $green
+      background-color: $green 
 
 .product-image
-  height: 339px
+  height: 340px
   overflow: hidden
   margin-bottom: 0.5em
   position: relative
+  display: block 
+
   img
     position: relative
     z-index: 1
-  .secondImage
-    position: absolute
-    top: 0px
-    left: 0px
-    display: none
     -webkit-transition: all .4s ease
     -moz-transition: all .4s ease
     -o-transition: all .4s ease
     transition: all .4s ease
+  .secondImage
+    position: absolute
+    top: 0px
+    left: 0px
+    opacity: 0
+  a 
+    position: relative
+    display: block
+  a:hover
+    img:first-child
+      opacity: 0
+    img:last-child
+      opacity: 1   
 
 .rating_list
+  display: none
   list-style: none
-  margin: 0 0 0.5em 0
+  margin: -0.3em 0 0 0
+  img 
+    width: auto
+    height: 17px
+    cursor: pointer
+    line-height: 13px
+    padding-top: 2px
+    float: left
+    margin: 5px 3px 0 0
   li
     width: 13px
     height: 13px
@@ -93,9 +135,81 @@
     line-height: 13px
     padding-top: 2px
     float: left
-    margin: 0 1px 0 0
+    margin: 0 3px 0 0
     i
-      font-size: 1em
       color: #e5e5e5
       &.active
-        color: #d6a916
+        color: #d6a916 
+
+.owl-carousel .owl-item .rating_list 
+  margin-right: 0.5em        
+.owl-carousel .owl-item .rating_list img 
+  width: auto
+
+
+.product-buttons
+  position: absolute
+  bottom: 25px
+  left: 0
+  width: 100% 
+  z-index: 9
+  background: #fff 
+  padding: 0.5em 1em 
+  display: block
+
+  .view 
+    padding: 0.3em 0.6em
+    color: $color-primary
+    border: 1px solid #e5e5e5
+    background: #fff
+    float: left
+    i
+      font-size: 1em
+    &:hover
+      border: 1px solid $color-primary
+
+  .add
+    padding: 0.3em 0.6em
+    color: $color-primary
+    border: 1px solid #e5e5e5    
+    background: $color-accent-secondary
+    float: right
+    i
+      font-size: 1em
+      color: #fff
+    &:hover
+      border: 1px solid $color-primary
+      background: #fff
+      i        
+        color: $color-accent-secondary
+.indisponible-icon
+  position: absolute
+  right: 0px
+  top: -409px
+  width: 55px
+  height: 55px
+  display: block
+  border-radius: 50%
+  z-index: 1
+  background: #bdbebf
+  color: #fff
+  text-align: center
+  padding-top: 13px
+  font-weight: 300
+
+.product-list .product:hover 
+  .product-buttons 
+    bottom: 98px
+    -webkit-transition: all .4s ease
+    -moz-transition: all .4s ease
+    -o-transition: all .4s ease
+    transition: all .4s ease 
+  .button
+    display: none
+
+  .rating_list
+    display: block
+
+.gray-border 
+  border-top: 1px solid #f0f0f2
+  padding: 1em 0

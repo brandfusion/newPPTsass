@@ -25,7 +25,15 @@
     margin: 10px 0 0 0
     line-height: 1.5
 
-.modal-body
+.modal-content 
+  border-radius: 0
+  font-size: initial
+  .modal-header h3 
+    font-size: 1.5em
+  .modal-body 
+    font-size: 0.8em    
+
+.modal-body  
   .first-paragraph
     h4
       font-size: 14px
@@ -92,3 +100,50 @@ ul.advertising-zone
   padding-left: 15px
   padding-top: 10px
   padding-bottom: 10px
+
+.news-item 
+  clear: both
+  width: 100%
+  padding: 0 0 10px 0
+  margin: 0 0 10px 0
+  
+  .entry-title 
+    font-size: 14px
+    color: #333333
+    line-height: 18px
+    text-transform: uppercase
+  .entry-info 
+    font-size: 12px
+    color: #6a767c
+    line-height: 1
+    margin-top: 7px
+  .entry-summary 
+    font-size: 12px
+    color: #333333
+    line-height: 14px
+  .read-more 
+    color: #f70002  
+
+.tooltip
+  z-index: 999 
+  position: absolute
+
+  .tooltip-inner   
+    padding: 0.5em 0
+    font-size: 0.8em
+    width: auto
+    min-width: 67px
+    max-width: 67px
+    background: $color-primary   
+
+.tr-all 
+  -webkit-transition: all 0.2s ease-in
+  -o-transition: all 0.2s ease-in
+  transition: all 0.2s ease-in 
+  
+.visible
+  opacity: 1
+  visibility: visible  
+
+.reset-right-padding
+  padding-right: 0  

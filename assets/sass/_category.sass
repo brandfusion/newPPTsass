@@ -1,5 +1,6 @@
 .category-header
   color: #000
+  font-size: initial
   .category-header-content
     background-color: #fff
     padding: 15px
@@ -99,7 +100,7 @@
   h3
     margin: 0
     padding: 0
-    font-size: 1.2em
+    font-size: 1em
     line-height: 1.5
     height: auto !important
     font-style: normal
@@ -155,7 +156,9 @@
   line-height: 18px
   color: #3a4347
   text-align: right
-  margin: 1.5em 0 0 0
+  padding: 0 0 1em 0
+  margin: 0 0 1em 0
+
   li
     margin: 0 0 0 0.5em
     float: left
@@ -184,11 +187,49 @@
 #productsOnPage, .sort
   display: block
   padding-top: 5px
+  font-size: 0.8em
+
+#quickview .modal-dialog
+  width: 50%
+.popup
+  .container 
+    width: 100%  
+  #product-page .thumbs .jcarousel ul 
+    width: auto
+    margin: 0 -1em 0 0
+  #product-page .thumbs .jcarousel ul li, #product-page .thumbs .jcarousel ul li:first-child
+    clear: none
+    float: left
+    width: 33%
+    margin: 1em 0 0 0    
+  #product-page .thumbs .jcarousel ul li a
+    display: block
+    width: 100%
+    text-align: center
+  #product-page .thumbs .jcarousel ul li img
+    max-width: 100%
+    width: auto
+    margin: 0 auto
+    height: auto
+    display: block
+    max-height: 100px    
+  #product-page 
+    margin: 0 0 10px 0
+  #product-page .product-price
+    background: #f4f4f4 
+    clear: both
+
+  #product-page .image-panel img
+    max-width: 100%
+    width: auto
+    margin: 0 auto
+    height: auto
+    max-height: 350px
+
 
 .sort-content
-  background: none
-  border-bottom: 1px solid #f0f0f2
-  padding: 0.5em 0 1em 0
+  background: none  
+  padding: 0
   margin: 0 0 1.5em 0
   clear: both
   width: 100%
@@ -202,3 +243,46 @@
   top: 0
   left: 0
   z-index: 9
+
+.sortBy 
+  font-size: initial
+  padding: 0 0 1em 0
+  margin: 0 0 1em 0
+  border-bottom: 1px solid #f0f0f2
+  .sort p
+    display: inline-block
+    color: #8c8c8c
+  .sort select 
+    display: inline-block
+    padding: 0.3em 0.5em
+    color: #8c8c8c
+    border: 1px solid #e5e5e5
+    margin: 0 0 0 0.5em
+#productsOnPage 
+  color: #8c8c8c
+#productsOnPageFooter 
+  color: #8c8c8c
+  font-size: 0.8em
+
+.pagination>li
+  margin: 0 0 0 0.2em
+  display: inline-block
+  float: left
+  background: none
+.pagination>li>a
+  color: $maincolor
+  background: none
+  border: 1px solid #e5e5e5  
+.pagination>li>span
+  background: none
+  color: $maincolor
+  border: 1px solid $maincolor  
+
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus
+  background: none
+  color: $maincolor
+  border: 1px solid $maincolor 
+.pagination>li>a:hover, .pagination>li>a:focus, .pagination>li>span:hover, .pagination>li>span:focus 
+  background: none
+  color: $maincolor
+  border: 1px solid $maincolor 

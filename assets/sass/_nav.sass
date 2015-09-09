@@ -8,7 +8,7 @@ $nav-level-one-bg-hover: transparent
   box-shadow: 0 0 0 #fff
 
 .main-nav
-  font-size: 12px
+  font-size: initial
   ul
     margin: 0px
     padding: 0px
@@ -18,6 +18,8 @@ $nav-level-one-bg-hover: transparent
       width: auto
       display: inline-block
       text-align: center
+      position: initial
+
       .subMenu
         display: block
         position: absolute
@@ -36,17 +38,19 @@ $nav-level-one-bg-hover: transparent
         -moz-transition: all .4s ease
         -o-transition: all .4s ease
         transition: all .4s ease
+        li 
+          text-align: left
         .row
-          //background-color: $color-accent;
+          //background-color: $color-accent
           padding: 0
         a
-          font-size: 12px
+          font-size: 0.8em
           border: none
           border-bottom: none
           font-weight: 400
-          padding: 0px 10px
+          padding: 0px
           color: #2a2e34
-          line-height: 2
+          line-height: 2.3
           text-transform: none
           border: none
           background: none
@@ -78,11 +82,16 @@ $nav-level-one-bg-hover: transparent
         font-size: 12px
         font-weight: 400
         margin: 0 1px 0 0
+        -webkit-transition: color .75s ease, background-color .75s ease, border-color .75s ease
+        -moz-transition: color .75s ease, background-color .75s ease, border-color .75s ease
+        -o-transition: color .75s ease, background-color .75s ease, border-color .75s ease
+        transition: color .75s ease, background-color .75s ease, border-color .75s ease
+
         &.home, &.home:hover
           background: $navItemColorHover
           height: auto
           width: auto
-          padding: 0.7em 1.5em 0.3em 1.5em
+          padding: 0.5em 1.5em 0.5em 1.5em
         img
           margin: 0 auto
         &:hover
@@ -90,8 +99,12 @@ $nav-level-one-bg-hover: transparent
           background: $navItemColorHover
           color: white
           border-radius: 0px
+          -webkit-transition: color .1s ease, background-color .1s ease, border-color .1s ease
+          -moz-transition: color .1s ease, background-color .1s ease, border-color .1s ease
+          -o-transition: color .1s ease, background-color .1s ease, border-color .1s ease
+          transition: color .1s ease, background-color .1s ease, border-color .1s ease          
           .fa
-            color: #fff
+            color: #fff        
         &:after
           background: url("../img/eurobike/menu-arrow.png") no-repeat center right
         .fa
@@ -107,16 +120,18 @@ $nav-level-one-bg-hover: transparent
           margin: 5px 0 0 7px
         &.inpath
           .fa
-            color: #4e8bcf
+            color: #fff    
+    
+
     // Menu Open - Hover
     li:hover
       .subMenu
         display: block
-        -webkit-transform: translate(0px, 0px)
-        -moz-transform: translate(0px, 0px)
-        -o-transform: translate(0px, 0px)
-        -ms-transform: translate(0px, 0px)
-        transform: translate(0px, 0px)
+        -webkit-transform: translateY(0px)
+        -moz-transform: translateY(0px)
+        -o-transform: translateY(0px)
+        -ms-transform: translateY(0px)
+        transform: translateY(0px)
         opacity: 1
         visibility: visible
       .fa
@@ -131,10 +146,12 @@ $nav-level-one-bg-hover: transparent
           &:hover
             border: none
           &.activeitem
-            border: none
+            // border: none
         &.dropdown-menu.M2
           display: block
           border: none
+        
+
     // Mega Menu (rework)
     li.megaMenu
       position: inherit
@@ -188,28 +205,36 @@ $nav-level-one-bg-hover: transparent
       width: auto
       text-align: left
     ul.dropdown-menu.M2
-      padding: 0 5px 15px 15px
+      padding: 0 0 15px 0
       text-align: left
       float: left
-      max-width: 760px
+      width: auto
+      border: none
+    ul.dropdown-menu.M2>a 
+      margin: 0 0 0 15px 
+
     ul.dropdown-menu.M2.col1
-      width: 210px
+      width: 230px
     ul.dropdown-menu.M2.col2
-      width: 390px
+      width: 450px
     ul.dropdown-menu.M2.col3
-      width: 590px
-    ul.dropdown-menu.M2.col4, ul.dropdown-menu.M2.col5
-      width: 760px
+      width: 670px
+    ul.dropdown-menu.M2.col4
+      width: 890px      
+    ul.dropdown-menu.M2.col5
+      width: 1110px  
+    ul.dropdown-menu.M2.col6, ul.dropdown-menu.M2.col7
+      width: 1110px
     ul.dropdown-menu.M2 > li
       float: left
-      margin-right: 10px
+      
     ul.dropdown-menu.M2 > li > a
       width: 100%
       display: block
       font-weight: 600
-      padding: 15px 0 5px 0
+      padding: 15px 0 5px 20px
       margin: 0 0 5px 0
-      border-bottom: 1px solid #e3e3e3
+      border-bottom: none
       &:hover
         color: $navItemColorHover
     ul.dropdown-menu.M2 li a span
@@ -229,20 +254,85 @@ $nav-level-one-bg-hover: transparent
       left: auto
       top: auto
       float: left
-      width: 180px
+      width: 200px
+      margin: 0 0 0 15px
     ul.M3 > li
-      width: 180px
+      width: 100%
     ul.M3 > li > a
-      padding-left: 0
-      width: 90%
+      padding-left: 5px
+      width: 100%
+      box-sizing: border-box
       border-bottom: 1px solid #fff
       &:hover
         color: $navItemColorHover
         border-bottom: 1px solid #fff
     //end add css
+.main-nav>ul>li:hover>a 
+  text-decoration: none
+  background: $navItemColorHover
+  color: white
+  border-radius: 0px
+  -webkit-transition: color .1s ease, background-color .1s ease, border-color .1s ease
+  -moz-transition: color .1s ease, background-color .1s ease, border-color .1s ease
+  -o-transition: color .1s ease, background-color .1s ease, border-color .1s ease
+  transition: color .1s ease, background-color .1s ease, border-color .1s ease 
+  .fa 
+    color: #fff     
 
 .fixed
-  top: 0
+  top: -60px
   position: fixed
   background: #fff
-  z-index: 9999
+  z-index: 99
+  border-bottom: 1px solid #e5e5e5
+
+@media (min-width: 768px) 
+  .fixed  
+    width: 720px
+@media (min-width: 992px) 
+  .fixed  
+    width: 940px   
+@media (min-width: 1200px) 
+  .fixed 
+    width: 1140px   
+
+
+.anchor-menu
+  margin: 0
+  padding: 0
+  ul
+    margin: 0
+    padding: 0
+    li
+      list-style-type: none
+      margin: 0
+      padding: 0
+      width: 100%
+      display: block
+      background: #f8f8f8
+      &:hover
+        background: #e5e5e5
+      a
+        border-bottom: 1px solid #ffffff
+        display: block
+        background: none
+        padding: 0.5em 1em
+        line-height: 1.5
+        &.bold-title
+          font-weight: bold
+          text-transform: uppercase
+
+.left-nav
+  list-style-type: none
+  display: block
+  padding: 27px 0 0 0
+  border-bottom: 1px solid #F6f6f6  
+  li 
+    display: block
+    padding: 0.5em 1em
+    line-height: 1.5
+    border-top: 1px solid #F6f6f6  
+    &:hover 
+      background-color: #f8f8f8 
+      a 
+        color: $navItemColorHover
