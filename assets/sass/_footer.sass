@@ -96,10 +96,13 @@
     padding: 10px 0 0 0
     margin: 0
     text-transform: inherit
+    a 
+      float: left 
+      margin: 1.2em 1em 0 0
     i
-      display: inline-block
-      margin: 1em 0.5em 0 0
-      font-size: 1em
+      display: block
+      margin: 0
+      font-size: 1.5em
       color: $color-primary
       border: 1px solid $color-primary
       padding: 0.5em 0.7em
@@ -121,17 +124,21 @@
 
   .item
     .icon
-      float: left
+      // float: left
+      display: inline-block
+      vertical-align: middle
       margin: 0 0.5em 0 0
       img
         margin: 0.1em 0.3em 0 0        
     h3
       color: $color-primary
-      margin: 1px 0 0 0
-      font-size: 1.2em
-      line-height: 1.5
-      max-width: 85%
-      float: left
+      margin: 0
+      font-size: 1em
+      line-height: 1.4
+      max-width: 70%
+      // float: left
+      display: inline-block
+      vertical-align: middle
     .description
       font-size: 0.8em
       line-height: 1.4
@@ -140,6 +147,8 @@
       float: left
       width: 100%
       margin: 0.5em 0 0.5em 0
+    a 
+      line-height: 1.5
   .fadeInLeft:nth-child(n+1)
     -webkit-animation-duration: 1s
     animation-duration: 1s
@@ -165,7 +174,6 @@
   position: fixed
   bottom: 97px
   right: 3%
-  display: block
   overflow: hidden
   display: none
   border: 1px solid #e5e5e5

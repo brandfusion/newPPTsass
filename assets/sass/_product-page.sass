@@ -37,7 +37,7 @@
           width: 100%
           clear: both
           float: none
-          margin: 1.4em 0 0 0
+          margin: 3em 0 0 0
           &:first-child
             margin: 0
           a
@@ -46,7 +46,7 @@
             float: none
             height: 175px
             text-align: center
-            border: 1px solid #eeeeee !important
+            // border: 1px solid #eeeeee !important
           img
             width: auto
             height: auto
@@ -63,24 +63,25 @@
     margin: 0 0 0 0
     background: none
     z-index: 1    
+    max-width: 130px
     p
       color: #5c5c5c
-      line-height: 18px
       font-weight: bold
       margin: 0
       padding: 0
       display: inline-block
       vertical-align: middle
       span
-        color: #f04b29
-        font-size: 25px
+        color: $color-secondary
+        font-size: 2em
+        line-height: 1
         margin-left: 5px
   .tva-inclus
     color: $maincolor
     line-height: 1
     font-size: 0.8em
     text-align: right
-    margin: 10px 0 0 0
+    margin: 5px 0
   .grey-box
     background: #eee
     margin-bottom: 20px
@@ -152,22 +153,28 @@
     
     .product-addtocart
       label
-        text-transform: uppercase
+        text-transform: lowercase
         display: inline-block
         font-weight: normal
         line-height: 1.8
         width: 25%
         color: #555
+        &::first-letter 
+          text-transform: uppercase
     .place-order
       padding: 0
       width: 100%
       i
         vertical-align: middle
-        margin-right: 10px
+        margin: -1px 10px 0 0
         font-size: 1.5em
+      span
+        display: inline-block
+        vertical-align: middle
+        line-height: 2        
       p
         font-size: 13px
-        color: #000
+        color: #555
         display: inline-block
         line-height: 45px
         float: left
@@ -212,16 +219,17 @@
             background-image: linear-gradient(to bottom, #ee3030, #f15c24)
   // Image Panel
   .image-panel
-    overflow: hidden
+    //overflow: hidden
     border: 1px solid #eeeeee 
-    height: 570px
-    padding: 0
     position: relative
+    // height: 570px
+    //padding: 0
+    //position: relative
     img
-      max-width: 100%
+      // max-width: 100%
       width: 100%
-      margin: 0 auto
-      height: auto
+      // margin: 0 auto
+      // height: auto
     .indisponible-icon
       position: absolute
       left: 40px
@@ -229,7 +237,7 @@
       width: 60px
       height: 60px
       line-height: 1.3
-      font-size: 0.9em
+      font-size: 0.8em
       display: block
       border-radius: 50%
       z-index: 1
@@ -237,18 +245,18 @@
       background: #bdbebf
       color: #fff
       text-align: center
-      padding-top: 15px
+      padding-top: 12px
       text-transform: uppercase
       font-weight: 300
     .product-image-zoomed
-      max-height: 607px
+      // max-height: 607px
       display: block
       overflow: hidden
       padding: 0
       width: 100%
   .product-code
     margin: 10px 0
-    padding: 0 0 5px 0
+    padding: 4px 0 5px 0
     color: #444
     line-height: 1
     clear: both
@@ -272,26 +280,39 @@
       display: inline-block
   .sale
     position: absolute
-    top: 5px
+    padding: 0.7em 0
+    background: $color-secondary
+    color: #fff
+    top: 20px
     right: 20px
-    width: 45px
-    height: 45px
-    background-image: url(../img/sale.png)
+    width: 70px
+    height: 70px
     display: block
-    z-index: 99
+    z-index: 9
+    font-size: 1.2em
+    text-align: center 
+    border-radius: 50%
+    span
+      display: block
+      font-size: 0.6em
+      color: #fff
+      line-height: 1.3
+      text-transform: uppercase
+
   .btn-place-order
     margin: 0.4em 0 0 0
-    padding: 8px 0
+    padding: 4px 0 3px 0
     width: 55%
+    max-width: 200px
     float: right
     background: $color-secondary
     border: 1px solid $color-secondary
     box-sizing: border-box
     font-size: 1.2em
+    font-weight: 600
     &:hover 
-      border: 1px solid #00C909
-      background: #00C909
-      color: #fff
+      background: none
+      color: $color-secondary
 
   .product-addtocart
     background: #f4f4f4
@@ -299,7 +320,7 @@
     margin: 0.5em 0 0 0
 
 .zoomContainer, .zoomWindow  
-  max-height: 568px !important
+  //max-height: 568px !important
   // max-width: 480px !important
 
 
@@ -329,9 +350,9 @@
   &:hover
     background: none
     a
-      color: $color-accent-secondary
+      color: $color-primary
     i 
-      color: $color-primary 
+      color: $color-secondary
 
 .comments 
   float: left
@@ -408,6 +429,15 @@
 #product-page .product-list .product-price 
   text-align: left
   margin: 0
+  .sale 
+    top: -397px
+    right: -80px
+    width: 60px
+    height: 60px
+    font-size: 1em
+    span 
+      line-height: 1.5
+      color: #fff
   span.price
     position: relative
     z-index: 11
@@ -418,8 +448,13 @@
     font-style: normal
     font-weight: 700
     background: #fff
-    margin: 3px 0 0 0
+    margin: 0
     padding: 0 0.5em 0.3em 0.6em
+  span.product-item-old-price 
+    font-size: 0.8em
+    color: $color-primary
+    &:hover 
+      color: $color-primary  
   span.btn-calltoaction 
     display: inline-block
     margin: 0 0.5em 0 0    
@@ -466,3 +501,95 @@
     line-height: 1
   &.owl-carousel .owl-nav .owl-prev:hover:before, &.owl-carousel .owl-nav .owl-next:hover:before
     color: #fff
+  .product a 
+    display: block
+    margin: 0 0 1em 0
+  .product-item 
+    margin-bottom: 0
+   
+
+#quickview
+  opacity: 0
+  .scroll-pop-up
+    height: 365px 
+    overflow: auto
+  .modal-dialog 
+    width: 60%  
+  .modal-dialog #product-page .image-panel
+    height: auto
+    border: none
+    img 
+      z-inde: 9999
+  #product-page .product-order .product-addtocart label
+    text-transform: capitalize
+  #product-page .product-order .place-order p   
+    color: #444
+  .product-price 
+    text-align: left
+  
+  #product-page .product-price
+    max-width: 100%
+  #product-page .product-price p 
+    display: inline-block
+    vertical-align: middle
+  #product-page .product-price p span
+    margin: 0 
+  #product-page .product-price small
+    line-height: 1.5
+    clear: none
+    display: inline-block
+    vertical-align: bottom
+  #owl-popup 
+    overflow: hidden
+    height: 340px 
+    margin: 2em 0
+    .item 
+      text-align: center
+    a 
+      display: inline-block
+      width: auto
+      margin: 0 auto
+   
+  .owl-theme .owl-nav 
+    position: static 
+    width: 100%
+  .owl-theme .owl-nav [class*='owl-'], .owl-theme .owl-nav [class*='owl-']:hover
+    background: none
+    width: 30px
+    height: 30px
+    line-height: 1 
+    color: $color-primary
+  .owl-prev 
+    float: left
+    position: absolute
+    top: 41%
+    left: 0
+    &:before
+      content: "\f104"
+      font-size: 5em
+      color: $color-primary
+      font-family: "FontAwesome"
+  .owl-next 
+    float: right 
+    position: absolute
+    top: 41%
+    right: 0
+    &:after
+      content: "\f105"
+      font-size: 5em
+      color: $color-primary
+      font-family: "FontAwesome"
+  .sizesTabel tr th, .sizesTabel tr td
+    padding: 4px 5px
+  #product-page section#product, .popup #product-page
+    margin: 0
+    padding: 0
+  #product-page h1
+    margin: 0 0 15px 0
+  #product-page .product-addtocart
+    margin: 0
+
+.visible 
+  opacity: 1 !important      
+button.close 
+  margin: 0 15px 0 0  

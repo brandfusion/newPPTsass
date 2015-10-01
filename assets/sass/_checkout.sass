@@ -2,21 +2,40 @@ $line: #dddddd
 $blue: #1a63a3
 
 .checkout-page
-  font-size: initial
+  
   h2
-    margin: 10px 0 15px
+    margin: 0.5em 0 1em 0
     padding: 0 0 7px 0
-    line-height: 18px
+    line-height: 1.2
     font-size: 1em
-    font-weight: bold
+    padding: 0.5em 1em
+    font-weight: 600
     color: #666666
-    border-bottom: 1px solid #ddd
+    background: #F8F8F8
     box-shadow: 0 0 0 #f7f7f7
+  .others-also-bought h2 
+    background: none  
+    margin: 1em 0 1em 0
+    padding: 0 0 0.5em
+    font-size: 1em
+    line-height: 1
+    font-weight: 400
+    color: #222226
+    position: relative
+    text-transform: uppercase
+    border-bottom: 1px solid #d9d9d9
+  .newsletter .newsletter_form h2 
+    background: none
+    padding: 0 0 0.3em 0
+  .product-item .sale 
+    right: -100px
+    font-size: 1.3em
+    padding: 0.8em 0
   h3
     margin: 30px 0 0
     padding: 0 0 7px 0
-    line-height: 18px
-    font-size: 14px
+    line-height: 1.2
+    font-size: 0.9em
     font-weight: 600
     color: #666666
   .wrap
@@ -75,7 +94,7 @@ $blue: #1a63a3
       display: block
       width: 80%
       margin: 113px auto 0px
-      background-color: #000
+      background-color: #666666
       border: 1px solid $line
       height: 40px
       border-radius: 5px
@@ -159,7 +178,7 @@ $blue: #1a63a3
     line-height: 30px
     margin-top: 25px
   .finish
-    padding-top: 10px
+    padding-top: 5px
     i
       font-size: 2.5em
       color: #00C909
@@ -175,13 +194,13 @@ $blue: #1a63a3
     background-color: #fff
     // box-shadow: 10px 10px 20px -10px #000;
     border: 1px solid #DDD
-    color: #000
+    color: #666
     border: 1px solid $line
     font-size: 1em
     margin-top: 30px
     z-index: 5
     a
-      color: #000
+      color: #666666
       text-decoration: underline
       &:hover
         color: $color-accent
@@ -274,22 +293,69 @@ $blue: #1a63a3
     margin: 13px 15px 10px 15px
     font-weight: 700
     font-size: 18px
-    color: #000
+    color: #666666
     border-bottom: 1px solid #CCCCCC
 
 .finish
   a
-    color: #000
+    color: #666666
     text-decoration: underline
-  .button-green
+  .button-red
     font-size: 1em
 
 .checkout-links a
   text-decoration: underline
-  color: #f70002
+  color: #ed2724
   line-height: 1.7
   &:hover
     text-decoration: none
 
 #order-container, .checkout-links
   font-size: 0.8em
+
+.receipt
+  font-size: 1em  
+
+  .receipt-content 
+    font-size: 0.8em
+    h1
+      font-size: 1.2em
+    h3 
+      margin: 0
+    img 
+      margin: 5px 0
+      max-height: 100px
+    .button-red 
+      font-size: 0.9em
+    .share-fb
+      font-size: 1em
+      font-weight: 600
+      h3
+        font-size: 13px
+        line-height: 1
+        color: #000
+        padding: 0 0 5px 0
+        margin: 0 0 10px 0
+        border-bottom: 1px solid #ddd
+  
+  .details
+    line-height: 1.4
+    color: $color-primary
+    margin: 15px 0 0 0
+    .price 
+      font-weight: 600
+    h3 
+      margin: 0
+      padding: 0
+      font-size: 12px
+      font-weight: 400
+    .fb-like.fb_iframe_widget
+      max-height: 100px
+
+.product-list-checkout  
+  height: 432px
+  overflow-y: auto
+  .product-name a 
+    color: $color-secondary  
+  img 
+    margin: 0 auto 0.5em auto

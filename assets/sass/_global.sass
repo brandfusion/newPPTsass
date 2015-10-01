@@ -7,19 +7,19 @@
   h1
     margin: 0 0 15px 0
     padding: 0px
-    font-size: 14px
-    line-height: 16px
+    font-size: 1em
+    line-height: 1.2
     font-weight: bold
     color: #ef2424
     text-transform: uppercase
   h4
-    font-size: 14px
+    font-size: 1em
     font-weight: 700
     color: #000000
     padding: 10px 0 0 0
     margin: 10px 0 0 0
   p
-    font-size: 12px
+    font-size: 0.8em
     color: #000
     padding: 0
     margin: 10px 0 0 0
@@ -31,18 +31,18 @@
   .modal-header h3 
     font-size: 1.5em
   .modal-body 
-    font-size: 0.8em    
+    font-size: initial
 
 .modal-body  
   .first-paragraph
     h4
-      font-size: 14px
+      font-size: 1em
       font-weight: 700
       color: #000000
       padding: 10px 0 0 0
       margin: 10px 0 0 0
     p
-      font-size: 12px
+      font-size: 0.8em
       color: #000
       padding: 0
       margin: 5px 0 0 0
@@ -104,25 +104,33 @@ ul.advertising-zone
 .news-item 
   clear: both
   width: 100%
+  font-size: initial
   padding: 0 0 10px 0
   margin: 0 0 10px 0
   
   .entry-title 
-    font-size: 14px
+    font-size: 0.9em
     color: #333333
-    line-height: 18px
+    line-height: 1.5
     text-transform: uppercase
   .entry-info 
-    font-size: 12px
+    font-size: 0.8em
     color: #6a767c
     line-height: 1
-    margin-top: 7px
-  .entry-summary 
-    font-size: 12px
-    color: #333333
-    line-height: 14px
+    margin-top: 7px    
+  .entry-summary, .entry-content 
+    font-size: 0.8em
+    color: $color-primary
+    line-height: 1.5
+    p 
+      font-size: 1
   .read-more 
-    color: #f70002  
+    color: $color-secondary 
+  .button-black 
+    font-size: 1em
+
+#general-page .list-news .entry-summary p 
+  font-size: 1em
 
 .tooltip
   z-index: 999 
@@ -147,3 +155,178 @@ ul.advertising-zone
 
 .reset-right-padding
   padding-right: 0  
+
+
+// sitemap
+#sitemap
+  padding: 20px 40px 20px 0
+  margin: 0px
+  width: auto
+  li
+    list-style-type: none !important
+    font-size: 14px
+    width: 100%
+    clear: both
+    
+
+  a
+    color: #000
+    line-height: 1.5
+  ul
+    padding: 0 0 0 0
+    margin: 5px 0 10px 0
+    li
+      padding: 0 0 0 0
+      font-size: 12px
+      clear: none
+      float: left
+      width: 33.3%
+      list-style-type: none
+      a 
+        padding: 0.5em 0
+        display: inline-block
+        width: 85%
+        border-bottom: 1px solid #fff
+        
+
+      ul
+        margin: 0 0 15px 5px
+        padding: 0
+        width: 100%
+        float: left
+
+        li
+          width: 100%
+          clear: both          
+          font-weight: bold
+          a
+            background: none
+            padding: 0.3em 0
+            border-bottom: none
+            &:before
+              content: "\f0d7"
+              font-family: "FontAwesome"
+              vertical-align: middle
+              margin-right: 0.5em
+              font-weight: 400
+              display: inline-block
+              color: $color-secondary 
+              transform-origin: center
+              -webkit-transform-origin: center
+              -ms-transform-origin: center 
+              transition: all 0.3s ease-out    
+              -ms-transition: all 0.3s ease-out
+              -webkit-transition: all 0.3s ease-out                                      
+          ul 
+            margin: 0 0 0 15px
+            li
+              width: 100%
+              clear: both
+              font-weight: normal
+              list-style-type: none
+              font-size: 12px
+              a:before 
+                display: none
+          ul li ul li  
+            list-style-type: none
+          
+
+          &.open a:before 
+            -ms-transform: rotate(180deg)
+            -webkit-transform: rotate(180deg)
+            transform: rotate(180deg)
+
+    &.M3, &.M4 
+      display: none
+
+.moldova #sitemap ul li
+  font-weight: bold
+  ul li
+    font-weight: normal
+
+#sitemap li
+  &:before
+    content: ""
+    color: #16538a
+  li
+    &:before
+      content: ""
+      color: #83bef3
+    li:before
+      content: ""
+      color: #badcfb
+
+.formtable 
+  tr td 
+    font-size: 0.8em
+  input[type="text"], select 
+    margin: 0 0 0.5em 0.5em
+  textarea
+    margin: 0 0 0 0.5em
+  input[type="button"]  
+    color: #fff
+    background: $color-secondary !important
+    border: 1px solid $color-secondary !important
+    &:hover
+      background: none !important
+      color: $color-secondary !important
+#aspnetForm table tr td .dw-button.dw-button-reset    
+  color: #fff
+  background: $color-secondary !important
+  border: 1px solid $color-secondary !important
+  &:hover
+    background: none !important
+    color: $color-secondary !important
+
+#cookieWarningDiv    
+  .cookies-bg
+    overflow: hidden
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1050
+    width: 100% 
+    height: 100%
+    background: rgba(0,0,0,0.3) 
+    -webkit-overflow-scrolling: touch
+  .cookies-modal
+    z-index: 1051
+    left: 50%
+    margin-left: -285px
+    position: absolute 
+    top: 50%
+    margin-top: -75px 
+    background-color: white
+    -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.5) 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5)
+    padding: 20px
+    width: 570px
+    font-size: 12px
+    line-height: 1.2
+    font-size: "Open Sans",Verdana,sans-serif
+    color: #333
+    a 
+      color: $color-secondary
+      text-decoration: underline  
+      &:hover
+        text-decoration: none   
+      &.button-red, &.button-black, &.button-border-black
+        font-size: 0.9em
+        line-height: 1
+        padding: 0.5em 0.8em
+        margin: 1em 0 0 0
+        text-decoration: none
+      &.button-red
+        color: #fff
+        &:hover
+          color: $color-secondary  
+      &.button-black
+        color: #fff
+        &:hover
+          color: $color-primary  
+      &.button-border-black
+        color: $color-primary
+        &:hover
+          color: #fff

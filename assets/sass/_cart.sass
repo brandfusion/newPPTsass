@@ -47,7 +47,7 @@
       width: auto
       vertical-align: top
     .quantity-box
-      padding-top: 25px
+      padding-top: 33px
     .quantity
       width: 45px
       padding-left: 3px
@@ -63,6 +63,12 @@
       text-decoration: none
       vertical-align: middle
       margin-right: -25px
+      i 
+        font-size: 1.5em
+        line-height: 2
+        color: $color-primary
+      i:hover 
+        color: $color-secondary
     .details
       display: inline-block
       width: 70%
@@ -89,12 +95,15 @@
         line-height: 1.3
         span
           font-size: 11px
+    .unitar-price
+      display: inline-block
+      padding-top: 40px  
     .total-price
       width: 100%
       margin: 0 auto
       text-align: left
       display: inline-block
-      padding-top: 45px
+      padding-top: 42px
       p
         font-size: 1em
         font-weight: 400
@@ -107,7 +116,7 @@
     background-color: #eee
     margin: -10px 15px 25px 15px
   .cos-sumar
-    padding: 5px 0 10px 0
+    padding: 0 0 10px 0
     margin: 0 0 15px 0
     font-size: 0.8em
     line-height: 1.5
@@ -120,7 +129,11 @@
         font-size: 14px
         color: #fff
         padding: 10px 15px
-
+    #total-cart 
+      display: block
+      margin: 10px 0 0 0
+  .button-red, .button-black, .button-border-black
+    margin: 0
 .checkout-page
   .container-wide
     .scroll-box
@@ -131,15 +144,15 @@
   font-size: 1em
   color: #d4d4d4
   text-decoration: none
-  margin-left: 5px
-  display: block
-  margin-top: 43px
+  margin-left: 0
+  display: inline-block
+  margin-top: 38px
   i
-    transition: all 0.2s ease-in
     vertical-align: middle
+    display: block
     &:hover
-      color: #d4d4d4
-      transform: scale(1.2)
+      color: $color-secondary
+
 
 #messageTooLow
   color: #666

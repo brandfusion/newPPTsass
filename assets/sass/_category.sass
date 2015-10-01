@@ -47,7 +47,12 @@
   display: inline-block
 
 .filter-vertical
-  margin: 10px 0 0 0
+  margin: 0
+  li 
+    padding: 1px 0 5px 0
+  h2 
+    margin-top: 0
+    text-transform: initial 
   input
     margin: -1px 5px 0 0
     vertical-align: middle
@@ -75,16 +80,25 @@
     font-weight: 700
     margin: 0px 0px 20px 20px
   label
-    font-size: 14px
+    font-size: 0.9em
     font-weight: normal
-    line-height: 20px
+    line-height: 1.2
     color: $color-primary
     vertical-align: middle
-    .badge
-      color: #777777
-      font-size: 14px
+    margin-bottom: 0
+    span
+      display: inline-block
+      vertical-align: middle
       background: none
-      font-weight: normal
+
+      &.badge
+        color: #C3C3C3
+        font-size: 0.9em
+        margin: -1px 0 0 0
+        background: none
+        font-weight: normal
+        span 
+          font-weight: 400
   ul
     margin: 5px 0 10px 0
     padding: 0px
@@ -100,7 +114,7 @@
   h3
     margin: 0
     padding: 0
-    font-size: 1em
+    font-size: 0.9em
     line-height: 1.5
     height: auto !important
     font-style: normal
@@ -151,6 +165,9 @@
     height: 25px
     line-height: 25px
 
+.clear-vertical-filters
+  padding: 1em 0 0 0
+
 .pagination-info
   font-size: 12px
   line-height: 18px
@@ -189,8 +206,6 @@
   padding-top: 5px
   font-size: 0.8em
 
-#quickview .modal-dialog
-  width: 50%
 .popup
   .container 
     width: 100%  
@@ -230,7 +245,7 @@
 .sort-content
   background: none  
   padding: 0
-  margin: 0 0 1.5em 0
+  margin: 0 0 0 0
   clear: both
   width: 100%
   float: left
@@ -286,3 +301,91 @@
   background: none
   color: $maincolor
   border: 1px solid $maincolor 
+
+
+.filter-vertical .filter-marime input
+  &[type="checkbox"], &[type="radio"]
+    display: none
+  &[type="checkbox"] + label, &[type="radio"] + label
+    padding-left: 32px
+    position: relative
+    cursor: pointer
+  &[type="checkbox"] + label:not([class*="fs_"])
+    padding: 1px 0 1px 32px
+  &[type="radio"] + label
+    padding-top: 5px
+    padding-bottom: 5px
+  &[type="checkbox"] + label::before, &[type="radio"] + label::before
+    content: ""
+    display: block
+    width: 20px
+    height: 20px
+    position: absolute
+    left: 0
+    background: #fff
+    border: 1px solid #e5e5e5
+    -webkit-border-radius: 0
+    -moz-border-radius: 0
+    -o-border-radius: 0
+  &[type="checkbox"] + label::before
+    top: -1px
+  &[type="radio"] + label
+    &::before
+      top: 50%
+      margin-top: -11px
+    &::after
+      position: absolute
+      visibility: hidden
+  &[type="checkbox"] + label::after
+    position: absolute
+    visibility: hidden
+    content: ""
+    width: 10px
+    height: 10px
+    left: 6px
+    top: 50%
+    margin-top: -7px
+    background: #000
+    -webkit-border-radius: 50%
+    -moz-border-radius: 50%
+    -o-border-radius: 50%
+    border-radius: 50%
+  &[type="radio"] + label::after
+    content: ""
+    width: 10px
+    height: 10px
+    left: 6px
+    top: 50%
+    margin-top: -5px
+    background: #000
+.filter-content 
+  ul
+    margin: 0.5em 0 0 0
+.circle
+  -webkit-border-radius: 50%
+  -moz-border-radius: 50%
+  -o-border-radius: 50%
+  border-radius: 50%
+
+.filter-vertical .filter-marime input
+  &[type="radio"]
+    + label
+      &::after, &::before
+        -webkit-border-radius: 50%
+        -moz-border-radius: 50%
+        -o-border-radius: 50%
+        border-radius: 50%
+    &:checked + label::after
+      opacity: 1
+      visibility: visible
+  &[type="checkbox"]:checked + label::after
+    opacity: 1
+    visibility: visible
+  &[type="radio"] + label::after, &[type="checkbox"] + label::after
+    opacity: 0
+    -webkit-transition: opacity .4s ease
+    -moz-transition: opacity .4s ease
+    -o-transition: opacity .4s ease
+    transition: opacity .4s ease
+    -webkit-backface-visibility: hidden
+

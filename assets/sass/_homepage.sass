@@ -221,11 +221,13 @@ h2.title
   .news-item 
     float: left
     width: 100%
-    margin: 0 0 0.8em 0
+    margin: 0.8em 0 0 0
     padding: 0
     clear: both
     border: none
     font-size: initial
+    &:first-child 
+      margin: 0
 
   .entry-title 
     text-transform: inherit 
@@ -256,7 +258,7 @@ h2.title
 
   .read-more 
     margin: 0.5em 0
-    display: block  
+    display: inline-block  
     color:  #d6a916
     &:hover
       text-decoration: underline
@@ -289,10 +291,13 @@ h2.title
 .map-homepage 
   padding: 0 0 15px 0
   margin: 0 0 20px 0
-
+  a 
+    display: inline-block
+    width: 90%
+    margin: 0 5%
   img 
-    max-width: 90%
-    margin: 0 auto
+    max-width: 100%
+    display: block
  
   .selecteaza_judetul
     width: 80%
@@ -397,7 +402,7 @@ h2.title
         width: 15px !important
         height: auto
         cursor: default
-        margin: 3px 3px 0 0
+        margin: 3px 2px 0 0
 
 .homepage-box
   position: relative
@@ -578,7 +583,7 @@ h2.title
   &.owl-theme .owl-nav 
     display: block
     top: -60px
-    right: 0
+    right: 15px
     margin-top: 0
     position: absolute
   &.owl-theme .owl-nav [class*='owl-']
@@ -596,7 +601,10 @@ h2.title
     -webkit-transition: all 0.2s ease-in 
     -o-transition: all 0.2s ease-in 
     transition: all 0.2s ease-in
-
+  .rating_list
+    margin: 0
+    img 
+      margin: 2px 0 0 2px
   &.owl-carousel .owl-nav .owl-prev:before 
     content: "\f104" 
     font-family: FontAwesome
@@ -614,6 +622,10 @@ h2.title
   &.owl-carousel .owl-nav .owl-prev:hover:before, &.owl-carousel .owl-nav .owl-next:hover:before
     color: #fff
  
+.promotion .product 
+  padding: 0 15px
+
+
 
 @keyframes jump
   0%, 100%

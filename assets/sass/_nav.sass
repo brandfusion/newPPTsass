@@ -76,11 +76,11 @@ $nav-level-one-bg-hover: transparent
       a
         color: $navItemColor
         display: block
-        padding: 0.5em 1.5em
+        padding: 0.6em 1.5em 0.5em 1.5em
         text-transform: uppercase
-        line-height: 1.7
+        line-height: 1.8
         font-size: 12px
-        font-weight: 400
+        font-weight: 600
         margin: 0 1px 0 0
         -webkit-transition: color .75s ease, background-color .75s ease, border-color .75s ease
         -moz-transition: color .75s ease, background-color .75s ease, border-color .75s ease
@@ -91,7 +91,9 @@ $nav-level-one-bg-hover: transparent
           background: $navItemColorHover
           height: auto
           width: auto
-          padding: 0.5em 1.5em 0.5em 1.5em
+          line-height: 1
+          padding: 0.8em 1.5em 0.6em 1.5em        
+
         img
           margin: 0 auto
         &:hover
@@ -118,9 +120,7 @@ $nav-level-one-bg-hover: transparent
           color: #fff
         .fa.fa-caret-down
           margin: 5px 0 0 7px
-        &.inpath
-          .fa
-            color: #fff    
+           
     
 
     // Menu Open - Hover
@@ -267,6 +267,13 @@ $nav-level-one-bg-hover: transparent
         color: $navItemColorHover
         border-bottom: 1px solid #fff
     //end add css
+.primary>a.inpath
+  background: #E5E5E5
+  .fa 
+    color: #ed2724
+ul.M3>li>a.inpath 
+  color: $navItemColorHover
+  
 .main-nav>ul>li:hover>a 
   text-decoration: none
   background: $navItemColorHover
@@ -318,6 +325,8 @@ $nav-level-one-bg-hover: transparent
         background: none
         padding: 0.5em 1em
         line-height: 1.5
+        font-size: 0.8em
+        color: #3a4347
         &.bold-title
           font-weight: bold
           text-transform: uppercase
@@ -331,6 +340,7 @@ $nav-level-one-bg-hover: transparent
     display: block
     padding: 0.5em 1em
     line-height: 1.5
+    font-size: 0.8em
     border-top: 1px solid #F6f6f6  
     &:hover 
       background-color: #f8f8f8 

@@ -5,7 +5,7 @@
 .product-item
   position: relative
   margin-bottom: 1em
-  min-height: 445px
+  min-height: 450px
   border: 1px solid #fff
   display: block
 
@@ -13,8 +13,24 @@
     border: 1px solid #d9d9d9
   .sale
     position: absolute
-    top: 0px
-    width: 100%
+    padding: 0.7em 0
+    background: $color-secondary
+    color: #fff
+    top: -397px
+    right: 15px
+    width: 60px
+    height: 60px
+    display: block
+    z-index: 9
+    font-size: 1em
+    text-align: center 
+    border-radius: 50%
+    span
+      display: block
+      font-size: 0.5em
+      color: #fff
+      line-height: 1.5
+      text-transform: uppercase
 
   span.btn-calltoaction
     margin: -0.5em 0.5em 0.5em 0
@@ -66,6 +82,8 @@
   font-weight: 700
   background: #fff
   padding: 0 1em 0.5em 1em
+  a 
+    color: $color-secondary
   a span
     color: #fff
 
@@ -90,9 +108,8 @@
       background-color: $green 
 
 .product-image
-  height: 340px
+  height: 345px
   overflow: hidden
-  margin-bottom: 0.5em
   position: relative
   display: block 
 
@@ -118,7 +135,6 @@
       opacity: 1   
 
 .rating_list
-  display: none
   list-style: none
   margin: -0.3em 0 0 0
   img 
@@ -128,19 +144,7 @@
     line-height: 13px
     padding-top: 2px
     float: left
-    margin: 5px 3px 0 0
-  li
-    width: 13px
-    height: 13px
-    cursor: pointer
-    line-height: 13px
-    padding-top: 2px
-    float: left
-    margin: 0 3px 0 0
-    i
-      color: #e5e5e5
-      &.active
-        color: #d6a916 
+    margin: 5px 2px 0 0  
 
 .owl-carousel .owl-item .rating_list 
   margin-right: 0.5em        
@@ -150,39 +154,41 @@
 
 .product-buttons
   position: absolute
-  bottom: 25px
+  bottom: 35px
   left: 0
   width: 100% 
   z-index: 9
   background: #fff 
-  padding: 0.5em 1em 
+  padding: 0.5em 0.9em 
   display: block
 
-  .view 
-    padding: 0.3em 0.6em
+  .view, .add 
+    padding: 0.3em 1em
     color: $color-primary
     border: 1px solid #e5e5e5
     background: #fff
     float: left
+    width: 45%
+    text-align: left
+    font-size: 0.8em
     i
       font-size: 1em
+      display: inline-block
+      vertical-align: middle  
+      margin: 2px 1em 0 0    
+    span
+      text-align: center 
+      display: inline-block
+      vertical-align: top 
+      max-width: 60%
+      font-size: 0.8em
+      line-height: 1.1
     &:hover
       border: 1px solid $color-primary
 
-  .add
-    padding: 0.3em 0.6em
-    color: $color-primary
-    border: 1px solid #e5e5e5    
-    background: $color-accent-secondary
-    float: right
-    i
-      font-size: 1em
-      color: #fff
-    &:hover
-      border: 1px solid $color-primary
-      background: #fff
-      i        
-        color: $color-accent-secondary
+  .add   
+    float: right    
+     
 .indisponible-icon
   position: absolute
   right: 0px
@@ -191,7 +197,7 @@
   height: 55px
   display: block
   border-radius: 50%
-  z-index: 1
+  z-index: 99
   background: #bdbebf
   color: #fff
   text-align: center
@@ -208,9 +214,6 @@
   .button
     display: none
 
-  .rating_list
-    display: block
-
 .gray-border 
   border-top: 1px solid #f0f0f2
-  padding: 1em 0
+  padding: 1em 0 0 0
